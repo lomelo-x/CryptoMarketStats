@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
-import ListItem from './components/ListItem';
+import LLi
 
 export default function App() {
 	return (
