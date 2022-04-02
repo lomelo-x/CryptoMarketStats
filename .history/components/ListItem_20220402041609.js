@@ -12,7 +12,7 @@ function ListItem({
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
 
 	return (
-		<TouchableOpacity onPress={onPress}>
+		<TouchableOpacity onPress={onP}>
 			<View style={styles.container}>
 				<View style={styles.leftContainer}>
 					<Image style={styles.image} source={{ uri: coinLogo }} />
@@ -25,7 +25,7 @@ function ListItem({
 				</View>
 				<View style={styles.rightContainer}>
 					<Text style={styles.coinPrice}>
-						${currentPrice.toLocaleString('en-US', { currency: 'USD' })}
+						S{currentPrice.toLocaleString('en-US', { currency: 'USD' })}
 					</Text>
 					<Text
 						style={[styles.coinSubPrice, { color: priceChangePercentColor }]}

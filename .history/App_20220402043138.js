@@ -12,10 +12,10 @@ import ListItem from './components/ListItem';
 export default function App() {
 	const bottomSheetModalRef = useRef(null);
 
-	const snapPoints = useMemo(() => ['33%'], []);
+	const snapPoints = useMemo(() => ['50%'], []);
 
 	const openModal = () => {
-		bottomSheetModalRef.current.present();
+		bottomSheetModalRef.current?.present();
 	};
 	return (
 		<BottomSheetModalProvider>

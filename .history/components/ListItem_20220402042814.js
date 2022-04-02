@@ -25,7 +25,7 @@ function ListItem({
 				</View>
 				<View style={styles.rightContainer}>
 					<Text style={styles.coinPrice}>
-						${currentPrice.toLocaleString('en-US', { currency: 'USD' })}
+						{currentPrice.toLocaleString('en-US', { currency: 'USD' })}
 					</Text>
 					<Text
 						style={[styles.coinSubPrice, { color: priceChangePercentColor }]}

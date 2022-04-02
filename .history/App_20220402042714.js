@@ -1,6 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useRef, useMemo } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native';
+import React, { useCallback, useRef, useMemo } from 'react';
+import {
+	StyleSheet,
+	Text,
+	View,
+	SafeAreaView,
+	FlatList,
+	Button,
+} from 'react-native';
 import {
 	BottomSheetModal,
 	BottomSheetModalProvider,
@@ -12,7 +19,7 @@ import ListItem from './components/ListItem';
 export default function App() {
 	const bottomSheetModalRef = useRef(null);
 
-	const snapPoints = useMemo(() => ['33%'], []);
+	const snapPoints = useMemo(() => ['50%'], []);
 
 	const openModal = () => {
 		bottomSheetModalRef.current.present();
