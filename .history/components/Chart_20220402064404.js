@@ -39,10 +39,9 @@ function Chart({
 						{priceChangePercent.toFixed(3)}%
 					</Text>
 				</View>
-				<View style={styles.chartContainer}>
-					<ChartPath height={SIZE / 2} stroke="black" width={SIZE} />
-					<ChartDot style={{ backgroundColor: 'green' }} />
-				</View>
+                <V
+				<ChartPath height={SIZE / 2} stroke="black" width={SIZE} />
+				<ChartDot style={{ backgroundColor: 'green' }} />
 			</View>
 		</ChartPathProvider>
 	);
@@ -83,9 +82,6 @@ const styles = StyleSheet.create({
 	},
 	coinSubPrice: {
 		fontSize: 18,
-	},
-	chartContainer: {
-		marginTop: 40,
 	},
 });
 

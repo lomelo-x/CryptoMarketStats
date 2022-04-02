@@ -84,9 +84,9 @@ const styles = StyleSheet.create({
 	coinSubPrice: {
 		fontSize: 18,
 	},
-	chartContainer: {
-		marginTop: 40,
-	},
+    chartContainer: {
+        marg
+    }
 });
 
 export default Chart;

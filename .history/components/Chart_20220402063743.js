@@ -1,12 +1,10 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import {
 	ChartDot,
 	ChartPath,
 	ChartPathProvider,
 } from '@rainbow-me/animated-charts';
-
-export const { width: SIZE } = Dimensions.get('window');
 
 function Chart({
 	currentPrice,
@@ -18,7 +16,7 @@ function Chart({
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
 
 	return (
-		<ChartPathProvider data={{ points: sparkline, smoothStrategy: 'bezier' }}>
+		<ChartPathProvider data={{ }}>
 			<View style={styles.container}>
 				<View style={styles.titleContainer}>
 					<View style={styles.coinTitle}>
@@ -38,10 +36,6 @@ function Chart({
 					>
 						{priceChangePercent.toFixed(3)}%
 					</Text>
-				</View>
-				<View style={styles.chartContainer}>
-					<ChartPath height={SIZE / 2} stroke="black" width={SIZE} />
-					<ChartDot style={{ backgroundColor: 'green' }} />
 				</View>
 			</View>
 		</ChartPathProvider>
@@ -83,9 +77,6 @@ const styles = StyleSheet.create({
 	},
 	coinSubPrice: {
 		fontSize: 18,
-	},
-	chartContainer: {
-		marginTop: 40,
 	},
 });
 
