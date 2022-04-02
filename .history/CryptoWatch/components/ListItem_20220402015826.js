@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 
+import {SAMPLE_DATA} from '../assets/data/sampleData'
 function ListItem({
 	coinName,
 	coinAbbreviation,
@@ -12,7 +13,7 @@ function ListItem({
 		<TouchableOpacity>
 			<View style={styles.container}>
 				<View style={styles.leftContainer}>
-					<Image style={styles.image} source={{ uri: coinLogo }} />
+					<Image style={styles.image} source={{ coinLogo }} />
 					<View style={styles.titleContainer}>
 						<Text style={styles.coinTitle}>{coinName}</Text>
 						<Text style={styles.coinSubTitle}>{coinAbbreviation}</Text>
@@ -22,6 +23,7 @@ function ListItem({
 					<Text style={styles.coinPrice}>{currentPrice}</Text>
 					<Text style={styles.coinSubPrice}>{priceChangePercent}</Text>
 				</View>
+				<Text>List Item</Text>
 			</View>
 		</TouchableOpacity>
 	);

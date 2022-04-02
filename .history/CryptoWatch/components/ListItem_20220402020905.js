@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	rightContainer: {
-		alignItems: 'flex-end',
+		alignItems: ''
 	},
 	titleContainer: {
 		marginLeft: 10,

@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
-import { SAMPLE_DATA } from './assets/data/sampleData';
+import { SAMPLE_DATA } from '../assets/data/sampleData';
 import ListItem from './components/ListItem';
 
 export default function App() {

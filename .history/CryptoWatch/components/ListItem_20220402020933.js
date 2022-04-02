@@ -14,7 +14,7 @@ function ListItem({
 				<View style={styles.leftContainer}>
 					<Image style={styles.image} source={{ uri: coinLogo }} />
 					<View style={styles.titleContainer}>
-						<Text style={styles.coinTitle}>{coinName}</Text>
+						<Text style={styles.coinTitle}>{coinName}.to</Text>
 						<Text style={styles.coinSubTitle}>{coinAbbreviation}</Text>
 					</View>
 				</View>

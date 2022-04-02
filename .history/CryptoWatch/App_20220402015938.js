@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
-import { SAMPLE_DATA } from './assets/data/sampleData';
+import {SAMPLE_DATA} from '../assets/data/sampleData'
 import ListItem from './components/ListItem';
 
 export default function App() {
@@ -11,15 +11,8 @@ export default function App() {
 			<View style={styles.titleContainer}>
 				<Text style={styles.title}>Markets</Text>
 			</View>
-			<View style={styles.divider} />
-			<ListItem
-				coinName={SAMPLE_DATA[0].name}
-				coinAbbreviation={SAMPLE_DATA[0].symbol}
-				currentPrice={SAMPLE_DATA[0].current_price}
-				priceChangePercent={
-					SAMPLE_DATA[0].price_change_percentage_7d_in_currency}
-				coinLogo={SAMPLE_DATA[0].image}
-			/>
+      <View style={styles.divider}/>
+      <ListItem name={SAMPLE_DATA[0].c}/>
 		</SafeAreaView>
 	);
 }
@@ -29,19 +22,19 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: 'black',
 	},
-	divider: {
-		height: StyleSheet.hairlineWidth,
-		backgroundColor: 'lightgrey',
-		marginHorizontal: 20,
-		marginTop: 20,
-	},
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: 'lightgrey',
+    marginHorizontal: 20,
+    marginTop: 20,
+  },
 	title: {
-		color: 'lightgrey',
+    color: 'lightgrey',
 		fontSize: 24,
 		fontWeight: 'bold',
 	},
 	titleContainer: {
 		marginTop: 65,
-		paddingHorizontal: 20,
+    paddingHorizontal: 20,
 	},
 });

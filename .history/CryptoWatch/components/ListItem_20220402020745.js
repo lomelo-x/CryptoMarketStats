@@ -22,6 +22,7 @@ function ListItem({
 					<Text style={styles.coinPrice}>{currentPrice}</Text>
 					<Text style={styles.coinSubPrice}>{priceChangePercent}</Text>
 				</View>
+				<Text>List Item</Text>
 			</View>
 		</TouchableOpacity>
 	);

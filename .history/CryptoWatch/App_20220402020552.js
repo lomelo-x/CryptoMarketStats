@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
-import { SAMPLE_DATA } from './assets/data/sampleData';
+import { SAMPLE_DATA } from '../assets/data/sampleData';
 import ListItem from './components/ListItem';
 
 export default function App() {
@@ -17,7 +17,8 @@ export default function App() {
 				coinAbbreviation={SAMPLE_DATA[0].symbol}
 				currentPrice={SAMPLE_DATA[0].current_price}
 				priceChangePercent={
-					SAMPLE_DATA[0].price_change_percentage_7d_in_currency}
+					SAMPLE_DATA[0].price_change_percentage_7d_in_currency
+				}
 				coinLogo={SAMPLE_DATA[0].image}
 			/>
 		</SafeAreaView>
