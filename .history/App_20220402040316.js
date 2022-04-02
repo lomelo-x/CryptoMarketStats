@@ -25,6 +25,9 @@ export default function App() {
 						coinAbbreviation={item.symbol}
 						currentPrice={item.current_price}
 						priceChangePercent={item.price_change_percentage_7d_in_currency}
+						priceChangePercent={
+							item.price_change_percentage_7d_in_currency
+						}
 						coinLogo={item.image}
 					/>
 				)}

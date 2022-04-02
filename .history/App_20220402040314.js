@@ -25,6 +25,10 @@ export default function App() {
 						coinAbbreviation={item.symbol}
 						currentPrice={item.current_price}
 						priceChangePercent={item.price_change_percentage_7d_in_currency}
+						priceChangePercent={
+							item.price_change_percentage_7d_in_currency
+						}
+>>>>>>> 4c6c624c63f2964bd8a49e9b0e83cd16a015ded2:CryptoWatch/App.js
 						coinLogo={item.image}
 					/>
 				)}
