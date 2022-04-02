@@ -11,7 +11,7 @@ import ListItem from './components/ListItem';
 import Chart from './components/Chart';
 
 export default function App() {
-	const [selectedCoinData, setSelectedCoinData] = useState(null);
+	const [selectedCoinData, setSelectedCoinData] = React.useState(null);
 	const bottomSheetModalRef = useRef(null);
 
 	const snapPoints = useMemo(() => ['33%'], []);
@@ -43,27 +43,25 @@ export default function App() {
 					)}
 				/>
 			</SafeAreaView>
-			<BottomSheetModal
+			{ selectedCoinData ? ()
+				<BottomSheetModal
 				style={styles.bottomSheetModal}
 				ref={bottomSheetModalRef}
 				index={0}
 				snapPoints={snapPoints}
 			>
 				<View style={styles.contentContainer}>
-					{selectedCoinData ? (
-						<Chart
-							currentPrice={selectedCoinData.current_price}
-							coinLogo={selectedCoinData.image}
-							coinName={selectedCoinData.name}
-							coinAbbreviation={selectedCoinData.symbol}
-							priceChangePercent={
-								selectedCoinData.price_change_percentage_7d_in_currency
-							}
-							sparkline={selectedCoinData.sparkline_in_7d.price}
-						/>
-					) : null}
+					<Chart
+						currentPrice={setSelectedCoinData.current_price}
+						coinLogo={setSelectedCoinData.image}
+						coinName={setSelectedCoinData.name}
+						priceChangePercent={
+							setSelectedCoinData.price_change_percentage_7d_in_currency
+						}
+						sparkline={setSelectedCoinData.sparkline_in_7d.price}
+					/>
 				</View>
-			</BottomSheetModal>
+			</BottomSheetModal>}
 		</BottomSheetModalProvider>
 	);
 }

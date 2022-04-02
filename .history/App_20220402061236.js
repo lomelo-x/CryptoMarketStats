@@ -59,7 +59,7 @@ export default function App() {
 							priceChangePercent={
 								selectedCoinData.price_change_percentage_7d_in_currency
 							}
-							sparkline={selectedCoinData.sparkline_in_7d.price}
+							sparkline={selectedCoinData.sparkline_in_7d.}
 						/>
 					) : null}
 				</View>

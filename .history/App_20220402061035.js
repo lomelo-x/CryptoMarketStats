@@ -52,14 +52,14 @@ export default function App() {
 				<View style={styles.contentContainer}>
 					{selectedCoinData ? (
 						<Chart
-							currentPrice={selectedCoinData.current_price}
-							coinLogo={selectedCoinData.image}
-							coinName={selectedCoinData.name}
-							coinAbbreviation={selectedCoinData.symbol}
+							currentPrice={setSelectedCoinData.current_price}
+							coinLogo={setSelectedCoinData.image}
+							coinName={setSelectedCoinData.name}
+							coinAbbreviation={setSelectedCoinData.symbol}
 							priceChangePercent={
-								selectedCoinData.price_change_percentage_7d_in_currency
+								setSelectedCoinData.price_change_percentage_7d_in_currency
 							}
-							sparkline={selectedCoinData.sparkline_in_7d.price}
+							sparkline={setSelectedCoinData.sparkline_in_7d.price}
 						/>
 					) : null}
 				</View>
