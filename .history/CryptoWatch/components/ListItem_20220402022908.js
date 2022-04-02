@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 
+const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
+
 function ListItem({
 	coinName,
 	coinAbbreviation,
@@ -27,7 +29,7 @@ function ListItem({
 						S{currentPrice.toLocaleString('en-US', { currency: 'USD' })}
 					</Text>
 					<Text
-						style={[styles.coinSubPrice, { color: priceChangePercentColor }]}
+						style={[styles.coinSubPrice, { color: priceChangePercentColor }}
 					>
 						{priceChangePercent.toFixed(3)}%
 					</Text>

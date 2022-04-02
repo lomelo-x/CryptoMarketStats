@@ -8,8 +8,6 @@ function ListItem({
 	priceChangePercent,
 	coinLogo,
 }) {
-	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
-
 	return (
 		<TouchableOpacity>
 			<View style={styles.container}>
@@ -23,12 +21,8 @@ function ListItem({
 					</View>
 				</View>
 				<View style={styles.rightContainer}>
-					<Text style={styles.coinPrice}>
-						S{currentPrice.toLocaleString('en-US', { currency: 'USD' })}
-					</Text>
-					<Text
-						style={[styles.coinSubPrice, { color: priceChangePercentColor }]}
-					>
+					<Text style={styles.coinPrice}>${currentPrice.toLocaleString('en-US', {currency: 'USD'})}</Text>
+					<Text style={styles.coinSubPrice}>
 						{priceChangePercent.toFixed(3)}%
 					</Text>
 				</View>
@@ -73,6 +67,7 @@ const styles = StyleSheet.create({
 		fontSize: 18,
 	},
 	coinSubPrice: {
+		color: 'red',
 		fontSize: 14,
 	},
 });

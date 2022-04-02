@@ -12,18 +12,28 @@ export default function App() {
 				<Text style={styles.title}>Markets</Text>
 			</View>
 			<View style={styles.divider} />
+			<ListItem
+				coinName={SAMPLE_DATA[0].name}
+				coinAbbreviation={SAMPLE_DATA[0].symbol}
+				currentPrice={SAMPLE_DATA[0].current_price}
+				priceChangePercent={
+					SAMPLE_DATA[0].price_change_percentage_7d_in_currency
+				}
+				coinLogo={SAMPLE_DATA[0].image}
+			/>
+
 			<FlatList
 				keyExtractor={(item) => item.id}
 				data={SAMPLE_DATA}
 				renderItem={({ item }) => (
 					<ListItem
-						coinName={item.name}
-						coinAbbreviation={item.symbol}
-						currentPrice={item.current_price}
+						coinName={SAMPLE_DATA[0].name}
+						coinAbbreviation={SAMPLE_DATA[0].symbol}
+						currentPrice={SAMPLE_DATA[0].current_price}
 						priceChangePercent={
-							item.price_change_percentage_7d_in_currency
+							SAMPLE_DATA[0].price_change_percentage_7d_in_currency
 						}
-						coinLogo={item.image}
+						coinLogo={SAMPLE_DATA[0].image}
 					/>
 				)}
 			/>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 
+const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
+
 function ListItem({
 	coinName,
 	coinAbbreviation,
