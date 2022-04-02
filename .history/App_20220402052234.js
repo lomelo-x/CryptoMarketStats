@@ -56,6 +56,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
 	bottomSheetModal: {
+		backgroundColor: '',
 		shadowColor: '#000',
 		shadowOffset: {
 			width: 0,

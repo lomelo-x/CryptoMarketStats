@@ -41,7 +41,7 @@ export default function App() {
 				/>
 			</SafeAreaView>
 			<BottomSheetModal
-				style={styles.bottomSheetModal}
+			style={styles.bottomSheetModal}
 				ref={bottomSheetModalRef}
 				index={0}
 				snapPoints={snapPoints}
@@ -55,16 +55,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-	bottomSheetModal: {
-		shadowColor: '#000',
-		shadowOffset: {
-			width: 0,
-			height: -4,
-		},
-		shadowOpacity: 0.25,
-		shadowRadius: 4,
-		elevation: 5,
-	},
+	
 	container: {
 		flex: 1,
 		backgroundColor: 'black',
