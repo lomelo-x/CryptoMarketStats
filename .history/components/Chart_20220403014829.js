@@ -14,7 +14,7 @@ function Chart({
 	coinLogo,
 	coinName,
 	coinAbbreviation,
-	sparkline,
+	sparkline
 }) {
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
 
