@@ -23,7 +23,7 @@ function Chart({
 			return `$${currentPrice.toLocaleString('en-US', { currency: 'USD' })}`;
 		}
 		const formattedValue = `$${parseFloat(value)
-			.toFixed(2)
+			
 			.replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
 
 		return formattedValue;

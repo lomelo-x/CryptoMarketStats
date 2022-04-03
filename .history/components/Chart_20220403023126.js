@@ -44,7 +44,7 @@ function Chart({
 					<Text style={styles.days}>7d</Text>
 				</View>
 				<View style={styles.priceContainer}>
-					<ChartYLabel format={formatUSD} style={styles.coinPrice} />
+					<ChartYLabel format={formattedValue} style={styles.coinPrice} />
 					{/* <Text style={styles.coinPrice}>
 						${currentPrice.toLocaleString('en-US', { currency: 'USD' })}
 					</Text> */}

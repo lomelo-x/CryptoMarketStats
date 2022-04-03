@@ -20,7 +20,10 @@ function Chart({
 	const formatUSD = (value) => {
 		'worklet';
 		if (value === '') {
-			return `$${currentPrice.toLocaleString('en-US', { currency: 'USD' })}`;
+			return `$${currentPrice
+				.toLocaleString('en-US', { currency: 'USD' })
+				.replace(/\d(?=(\d{3})+\.)/g, '$&,')
+				.toFixed(2)}`;
 		}
 		const formattedValue = `$${parseFloat(value)
 			.toFixed(2)
