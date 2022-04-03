@@ -1,5 +1,5 @@
 # CryptoWatch
-Crypto Tracker pulling the 20 most popular cryptocurrencies from the [Coin Gecko API](https://www.coingecko.com/en/api)built with React-Native
+Crypto Tracker pulling the 20 most popular cryptocurrencies from the [Coin Gecko API](https://www.coingecko.com/en/api) built with React-Native
 
 ## Set up
 1. `npm i or yarn`
