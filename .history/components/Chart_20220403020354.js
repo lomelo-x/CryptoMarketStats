@@ -20,11 +20,11 @@ function Chart({
 	const formatUSD = (value) => {
 		'worklet';
 		if (value === '') {
-			return `$${currentPrice.toLocaleString('en-US', { currency: 'USD' })}`;
+			return `${currentPrice}`;
 		}
-		const formattedValue = `$${parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
-
-		return formattedValue;
+		return `$ ${value.toLocaleString('en-US', {
+			currency: 'USD',
+		})}`;
 	};
 
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
@@ -42,7 +42,10 @@ function Chart({
 					<Text style={styles.days}>7d</Text>
 				</View>
 				<View style={styles.priceContainer}>
-					<ChartYLabel format={formatUSD} style={styles.coinPrice} />
+					<ChartYLabel
+						format={formatUSD}
+						style={styles.coinPrice}
+					/>
 					{/* <Text style={styles.coinPrice}>
 						${currentPrice.toLocaleString('en-US', { currency: 'USD' })}
 					</Text> */}

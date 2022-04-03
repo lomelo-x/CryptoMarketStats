@@ -4,7 +4,7 @@ import {
 	ChartDot,
 	ChartPath,
 	ChartPathProvider,
-	ChartYLabel,
+	
 } from '@rainbow-me/animated-charts';
 
 export const { width: SIZE } = Dimensions.get('window');
@@ -17,16 +17,6 @@ function Chart({
 	coinAbbreviation,
 	sparkline,
 }) {
-	const formatUSD = (value) => {
-		'worklet';
-		if (value === '') {
-			return `$${currentPrice.toLocaleString('en-US', { currency: 'USD' })}`;
-		}
-		const formattedValue = `$${parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
-
-		return formattedValue;
-	};
-
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
 
 	return (
@@ -42,10 +32,9 @@ function Chart({
 					<Text style={styles.days}>7d</Text>
 				</View>
 				<View style={styles.priceContainer}>
-					<ChartYLabel format={formatUSD} style={styles.coinPrice} />
-					{/* <Text style={styles.coinPrice}>
+					<Text style={styles.coinPrice}>
 						${currentPrice.toLocaleString('en-US', { currency: 'USD' })}
-					</Text> */}
+					</Text>
 					<Text
 						style={[styles.coinSubPrice, { color: priceChangePercentColor }]}
 					>
@@ -91,7 +80,6 @@ const styles = StyleSheet.create({
 		marginLeft: 4,
 	},
 	coinPrice: {
-		color: 'black',
 		fontSize: 24,
 		fontWeight: 'bold',
 	},

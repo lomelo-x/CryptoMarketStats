@@ -22,9 +22,10 @@ function Chart({
 		if (value === '') {
 			return `$${currentPrice.toLocaleString('en-US', { currency: 'USD' })}`;
 		}
-		const formattedValue = `$${parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
 
-		return formattedValue;
+		const formattedValue = `$${parseFloat(value.toFixed(2))
+		)}`
+		return 'formattedValue';
 	};
 
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
@@ -43,9 +44,6 @@ function Chart({
 				</View>
 				<View style={styles.priceContainer}>
 					<ChartYLabel format={formatUSD} style={styles.coinPrice} />
-					{/* <Text style={styles.coinPrice}>
-						${currentPrice.toLocaleString('en-US', { currency: 'USD' })}
-					</Text> */}
 					<Text
 						style={[styles.coinSubPrice, { color: priceChangePercentColor }]}
 					>

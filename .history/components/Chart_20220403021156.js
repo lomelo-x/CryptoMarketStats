@@ -22,9 +22,11 @@ function Chart({
 		if (value === '') {
 			return `$${currentPrice.toLocaleString('en-US', { currency: 'USD' })}`;
 		}
-		const formattedValue = `$${parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
-
-		return formattedValue;
+		const formattedValue = `$${parseFloat(value.toFixed(2)).replace(
+			/\d(?=(\d{3})+\.)/g,
+			'$&,'
+		)}`;
+		return 'formattedValue';
 	};
 
 	const priceChangePercentColor = priceChangePercent > 0 ? 'green' : 'red';
